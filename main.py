@@ -49,6 +49,18 @@ def bellman_ford(graph, start_value):
 
     return dist
 
+def dijkstra(graph, start_value):
+    dist = {node: float('inf') for node in graph.nodes}
+    dist[start_value]=0
+    vidited = set()
+
+    while len(visited) < len(graph.nodes):
+        min_node = None
+        min_dist=float('inf')
+        
+    
+    return dist
+
 for graph in {g1,g2,g3,g4}:
     print(graph)
     print("Bellman-Ford: ", bellman_ford(graph, "A"))

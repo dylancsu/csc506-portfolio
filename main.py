@@ -38,7 +38,7 @@ print("\nGraph 4:")
 print(g4)
 
 def bellman_ford(graph, start_value):
-    dist = {node for node in graph_nodes}
+    dist = {node for node in graph.nodes}
     dist[start_value]=0
 
     for i in range(len(graph.nodes)-1):

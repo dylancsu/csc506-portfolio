@@ -6,8 +6,6 @@ g1.add_edge("A", "C", 5)
 g1.add_edge("B", "C", 1)
 g1.add_edge("C", "D", 3)
 g1.add_edge("D", "A", 4)
-print("Graph 1:")
-print(g1)
 
 g2 = Graph()
 edges = [("A", "B", 7), ("A", "C", 9), ("B", "D", 10), ("C", "D", 11),
@@ -15,8 +13,6 @@ edges = [("A", "B", 7), ("A", "C", 9), ("B", "D", 10), ("C", "D", 11),
 for u, v, w in edges:
     g2.add_edge(u, v, w)
     g2.add_edge(v, u, w)
-print("\nGraph 2:")
-print(g2)
 
 g3 = Graph()
 g3.add_edge("A", "B", 4)
@@ -25,8 +21,6 @@ g3.add_edge("C", "D", 7)
 g3.add_edge("D", "E", 9)
 g3.add_edge("E", "F", 10)
 g3.add_edge("F", "G", 2)
-print("\nGraph 3:")
-print(g3)
 
 g4 = Graph()
 nodes = ["A", "B", "C", "D", "E"]
@@ -34,8 +28,6 @@ for i in range(len(nodes)):
     for j in range(len(nodes)):
         if i != j:
             g4.add_edge(nodes[i], nodes[j], (i + j) % 4 + 1)
-print("\nGraph 4:")
-print(g4)
 
 def bellman_ford(graph, start_value):
     dist = {node: float('inf') for node in graph.nodes}

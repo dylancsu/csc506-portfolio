@@ -36,3 +36,15 @@ for i in range(len(nodes)):
             g4.add_edge(nodes[i], nodes[j], (i + j) % 4 + 1)
 print("\nGraph 4:")
 print(g4)
+
+def bellman_ford(graph, start_value):
+    dist = {node for node in graph_nodes}
+    dist[start_value]=0
+
+    for i in range(len(graph.nodes)-1):
+        for node in graph.nodes.values():
+            for neighbor, weight in node.adjacent.items():
+                if dist[node.value]+weight < dist[neighbor.value]:
+                    dist[neighbor.value] = dist[node.value] + weight
+
+    return dist

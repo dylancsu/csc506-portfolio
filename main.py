@@ -52,7 +52,7 @@ def bellman_ford(graph, start_value):
 def dijkstra(graph, start_value):
     dist = {node: float('inf') for node in graph.nodes}
     dist[start_value]=0
-    vidited = set()
+    visited = set()
 
     while len(visited) < len(graph.nodes):
         min_node = None

@@ -51,4 +51,4 @@ def bellman_ford(graph, start_value):
 
 for graph in {g1,g2,g3,g4}:
     print(graph)
-    print("Bellman-Ford: ", bellman_ford(g, "A"))
+    print("Bellman-Ford: ", bellman_ford(graph, "A"))

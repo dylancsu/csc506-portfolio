@@ -48,3 +48,7 @@ def bellman_ford(graph, start_value):
                     dist[neighbor.value] = dist[node.value] + weight
 
     return dist
+
+for graph in {g1,g2,g3,g4}:
+    print(graph)
+    print("Bellman-Ford: ", bellman_ford(g, "A"))

@@ -78,4 +78,5 @@ def dijkstra(graph, start_value):
 
 for graph in {g1,g2,g3,g4}:
     print(graph)
+    print("Dijkstra: ", dijkstra(graph, "A"))
     print("Bellman-Ford: ", bellman_ford(graph, "A"))

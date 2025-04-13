@@ -57,7 +57,22 @@ def dijkstra(graph, start_value):
     while len(visited) < len(graph.nodes):
         min_node = None
         min_dist=float('inf')
-        
+        for node, d in dist.items():
+            if node not in visited and d<min_dist:
+                min_dist=d
+                min_node = node
+
+        if min_node is None:
+            break
+
+        visited.add(min_node)
+        current_node = graph.nodes[min_node]
+
+        for neighbor, weight in current_node.adjacent.items():
+            if neighbor.value not in visited:
+                new_dist = dist[min_node] + weight
+                if new_dist < dist[neighbor.value]:
+                    dist[neighbor.value] = new_dist
     
     return dist
 
